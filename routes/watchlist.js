@@ -20,4 +20,8 @@ router.put('/:id',watchlist.changeToWatched);
 //Delete Movie from database
 router.delete('/:id',watchlist.deleteMovie);
 
+router.use((req,res)=>{
+    res.status(404).send('Not Found');
+});
+
 module.exports=router;

@@ -11,14 +11,15 @@ async function movieSearch(movie_name,api_key){
         final['poster_path']=`https://image.tmdb.org/t/p/original/${poster}`;
         return final;
     }catch(err){
-        console.error(err);
+        return err;
     }
 }
 
 function searchNewMovie(req,res){
     const movie=req.query.search;
     movieSearch(movie,api_key)
-    .then((data)=>{return res.send(data)});
+    .then((data)=>{res.send(data)})
+    .catch(err=>res.status(500).send(err.message));
 }
 
 module.exports=searchNewMovie;
