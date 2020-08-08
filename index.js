@@ -2,6 +2,12 @@ const express= require('express');
 const app=express();
 const mongoose=require('mongoose');
 const port = 3000;
+const searchRoute=require('./routes/movieSearch');
+const watchlistRoute=require('./routes/watchlist');
+
+app.use(express.urlencoded({extended:true}));
+app.use('/search',searchRoute);
+app.use('/all',watchlistRoute);
 
 //Connecting to database
 const url='mongodb+srv://pidos:3A8wKoUbGBhcD8dV@cluster0-rfghy.gcp.mongodb.net/watchlist?retryWrites=true&w=majority';;
@@ -13,6 +19,3 @@ mongoose.connect(url,{useUnifiedTopology:true, useNewUrlParser:true})
   });
 })
 .catch((err)=>console.log(err));
-
-app.use(express.urlencoded({extended:true}));
-
