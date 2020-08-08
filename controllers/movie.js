@@ -19,7 +19,7 @@ async function movieSearch(movie_name,api_key){
 // .then(result=>console.log(result));
 
 function searchNewMovie(req,res){
-    const movie=req.params;
+    const movie=req.query.search;
     movieSearch(movie,api_key)
     .then(data=>res.json(data));
 }
