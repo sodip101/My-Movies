@@ -1,7 +1,8 @@
 # My-Movies
 ### RESTful API made using Node.js, Express, and MongoDB
-The API performs CRUD Operations on a MongoDB collection that stores movie details for a user
-| Endpoints | HTTP Method | Description |
+The API performs CRUD Operations on a MongoDB collection that stores movie details for a user.
+
+| Endpoint | HTTP Method | Description |
 | --------- | ----------- | ----------- |
 | all/watchlist | GET | display all movies that the user hasn't watched |
 | all/watched | GET | display all movies that the user has watched |
