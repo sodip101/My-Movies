@@ -1,5 +1,5 @@
 # My-Movies
-###RESTful API made using Node.js, Express, and MongoDB
+### RESTful API made using Node.js, Express, and MongoDB
 The API performs CRUD Operations on a MongoDB collection that stores movie details for a user
 | Endpoints | HTTP Method | Description |
 | --------- | ----------- | ----------- |
@@ -9,4 +9,4 @@ The API performs CRUD Operations on a MongoDB collection that stores movie detai
 | all/add | POST | add new a new movie to the collection |
 | all/:id | PUT | update watched status for a particular movie |
 | all/:id | DELETE | delete a movie from the collection |
-| search?search=<search keywords> | GET | fetch data of a movie that matches the search query string from an external API |
+| search?search=search keywords | GET | fetch data of a movie that matches the search query string from an external API |
