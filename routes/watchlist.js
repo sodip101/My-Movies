@@ -19,3 +19,5 @@ router.put('/:id',watchlist.changeToWatched);
 
 //Delete Movie from database
 router.delete('/:id',watchlist.deleteMovie);
+
+module.exports=router;

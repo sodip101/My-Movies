@@ -2,8 +2,8 @@ const express= require('express');
 const app=express();
 const mongoose=require('mongoose');
 const port = 3000;
-const searchRoute=require('./routes/movieSearch');
-const watchlistRoute=require('./routes/watchlist');
+const searchRoute=require('./routes/movieSearch.js');
+const watchlistRoute=require('./routes/watchlist.js');
 
 app.use(express.urlencoded({extended:true}));
 app.use('/search',searchRoute);

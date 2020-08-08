@@ -1,4 +1,3 @@
-const mongoose=require(mongoose);
 const Movie=require('../models/movieSchema.js');
 
 //Get all Movies that user hasn't watched

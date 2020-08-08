@@ -3,3 +3,5 @@ const router=express.Router();
 const movieSearch=require('../controllers/movie.js');
 
 router.get('/',movieSearch);
+
+module.exports=router;
