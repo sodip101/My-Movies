@@ -9,7 +9,7 @@ exports.getWatchlist=(req,res)=>{
 };
 
 //Get all Movies that user has watched
-exports.getWatchlist=(req,res)=>{
+exports.getWatchedlist=(req,res)=>{
     Movie.find({watched: true})
         .then(result=>res.send(result))
         .catch(err=>console.log(err));
