@@ -12,7 +12,7 @@ router.get('/watched',watchlist.getWatchedlist);
 router.get('/:id',watchlist.getMovie);
 
 //Add new movie
-router.post('/');
+router.post('/add',watchlist.addMovie);
 
 //Update watch status
 router.put('/:id',watchlist.changeToWatched);
