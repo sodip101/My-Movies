@@ -6,6 +6,7 @@ const searchRoute=require('./routes/movieSearch.js');
 const watchlistRoute=require('./routes/watchlist.js');
 
 app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 app.use('/search',searchRoute);
 app.use('/all',watchlistRoute);
 

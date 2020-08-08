@@ -27,13 +27,12 @@ exports.addMovie=(req,res)=>{
         title: req.body.title,
         overview: req.body.overview,
         release_date: req.body.release_date,
-        poster: req.body.poster,
-        watched: req.body.watched
+        poster: req.body.poster
     });
 
     newMovie.save()
-        .then(result=>res.send(result))
-        .catch(err=>console.log(err));
+    .then(result=>res.send(result))
+    .catch(err=>console.log(err));
 };
 
 //Change Watched Status
